@@ -1,4 +1,10 @@
+// app/layout.tsx
+'use client'
 import { Providers } from './providers'
+import Navbar from '@/components/Navbar'
+import { Open_Sans } from '@next/font/google'
+
+const openSans = Open_Sans({ subsets: ['latin'], weight: ['400', '600', '700'] })
 
 export default function RootLayout({
   children,
@@ -6,9 +12,12 @@ export default function RootLayout({
   children: React.ReactNode,
 }) {
   return (
-    <html lang='en'>
-      <body>
-        <Providers>{children}</Providers>
+    <html lang='pt-br' className={openSans.className}>
+      <body >
+        <Providers>
+          <Navbar />
+          {children}
+        </Providers>
       </body>
     </html>
   )
