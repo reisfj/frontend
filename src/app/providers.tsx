@@ -9,6 +9,7 @@ const openSans = {
     medium: 600,
     bold: 700,
   },
+  
 }
 
 const theme = extendTheme({
@@ -16,7 +17,12 @@ const theme = extendTheme({
     heading: openSans.fontFamily,
     body: openSans.fontFamily,
   },
-})
+  colors: {
+    custom: {
+      onSecundary: ' #ffffff',
+    },
+  },
+});
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return <ChakraProvider theme={theme}>{children}</ChakraProvider>
