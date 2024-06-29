@@ -1,4 +1,3 @@
-// app/providers.tsx
 'use client'
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 
